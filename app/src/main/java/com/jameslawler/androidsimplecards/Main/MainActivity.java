@@ -5,6 +5,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.EditText;
 
+import com.jameslawler.androidsimplecards.CardList.CardListAdapter;
 import com.jameslawler.androidsimplecards.R;
 import com.jameslawler.androidsimplecards.RoboPresenterActivity;
 
