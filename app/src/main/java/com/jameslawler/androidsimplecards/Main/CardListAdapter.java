@@ -10,6 +10,11 @@ import com.jameslawler.androidsimplecards.R;
 
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import roboguice.inject.InjectView;
+
 /**
  * Created by james on 1/31/2016.
  */
@@ -17,10 +22,17 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.ViewHo
     private List<String> listItems;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
+        @Bind(R.id.info_text)
         public TextView infoText;
-        public ViewHolder(View v) {
-            super(v);
-            this.infoText = (TextView) v.findViewById(R.id.info_text);
+
+        public ViewHolder(View view) {
+            super(view);
+            ButterKnife.bind(this, view);
+        }
+
+        @OnClick(R.id.info_text)
+        public void onInfoTextClick() {
+            this.infoText.setText("James was here");
         }
     }
 
